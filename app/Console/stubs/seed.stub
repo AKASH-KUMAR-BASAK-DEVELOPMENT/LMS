@@ -1,0 +1,18 @@
+<?php
+
+namespace Module\ModuleName\database\seeds;
+
+use Illuminate\Database\Seeder;
+
+class classname extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+
+    }
+}

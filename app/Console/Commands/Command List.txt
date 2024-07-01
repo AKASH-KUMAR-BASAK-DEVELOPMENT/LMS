@@ -1,0 +1,5 @@
+--> module:nameofmodule
+--> make:module
+--> module:controller
+--> module:model
+
