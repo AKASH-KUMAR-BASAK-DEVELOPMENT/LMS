@@ -681,11 +681,11 @@
     <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
 
     <script>
-        // function submitForm() {
-        //     let form = document.getElementById('course_form');
-        //     quillEditorDataTaken();
-        //     form.submit();
-        // }
+        function submitForm() {
+            let form = document.getElementById('course_form');
+            quillEditorDataTaken();
+            form.submit();
+        }
 
         function openModal() {
             document.getElementById('progress-modal').style.display = 'flex';
@@ -695,53 +695,53 @@
             document.getElementById('progress-modal').style.display = 'none';
         }
 
-        function submitForm() {
-            var form = document.getElementById('course_form');
-            var formData = new FormData(form);
+        {{--function submitForm() {--}}
+        {{--    var form = document.getElementById('course_form');--}}
+        {{--    var formData = new FormData(form);--}}
 
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', form.action, true);
+        {{--    var xhr = new XMLHttpRequest();--}}
+        {{--    xhr.open('POST', form.action, true);--}}
 
-            xhr.upload.addEventListener('progress', function(e) {
-                if (e.lengthComputable) {
-                    var percentComplete = (e.loaded / e.total) * 100;
-                    var progressBar = document.getElementById('progress-bar');
-                    var progressText = document.getElementById('progress-text');
+        {{--    xhr.upload.addEventListener('progress', function(e) {--}}
+        {{--        if (e.lengthComputable) {--}}
+        {{--            var percentComplete = (e.loaded / e.total) * 100;--}}
+        {{--            var progressBar = document.getElementById('progress-bar');--}}
+        {{--            var progressText = document.getElementById('progress-text');--}}
 
-                    progressBar.style.width = percentComplete + '%';
-                    progressText.style.color = 'white';
-                    progressText.innerHTML = Math.round(percentComplete) + '%';
-                }
-            }, false);
+        {{--            progressBar.style.width = percentComplete + '%';--}}
+        {{--            progressText.style.color = 'white';--}}
+        {{--            progressText.innerHTML = Math.round(percentComplete) + '%';--}}
+        {{--        }--}}
+        {{--    }, false);--}}
 
-            xhr.addEventListener('load', function() {
-                if (xhr.status === 200) {
-                    window.location.href = '{{ route('course.index') }}';
-                } else {
-                    alert('An error occurred while submitting the form. Please try again.');
-                    closeModal();
-                }
-            });
+        {{--    xhr.addEventListener('load', function() {--}}
+        {{--        if (xhr.status === 200) {--}}
+        {{--            window.location.href = '{{ route('course.index') }}';--}}
+        {{--        } else {--}}
+        {{--            alert('An error occurred while submitting the form. Please try again.');--}}
+        {{--            closeModal();--}}
+        {{--        }--}}
+        {{--    });--}}
 
-            xhr.addEventListener('error', function() {
-                alert('An error occurred while submitting the form. Please try again.');
-                closeModal();
-            });
+        {{--    xhr.addEventListener('error', function() {--}}
+        {{--        alert('An error occurred while submitting the form. Please try again.');--}}
+        {{--        closeModal();--}}
+        {{--    });--}}
 
-            xhr.addEventListener('abort', function() {
-                alert('Form submission was aborted.');
-                closeModal();
-            });
+        {{--    xhr.addEventListener('abort', function() {--}}
+        {{--        alert('Form submission was aborted.');--}}
+        {{--        closeModal();--}}
+        {{--    });--}}
 
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4) {
-                    closeModal();
-                }
-            };
+        {{--    xhr.onreadystatechange = function() {--}}
+        {{--        if (xhr.readyState === 4) {--}}
+        {{--            closeModal();--}}
+        {{--        }--}}
+        {{--    };--}}
 
-            openModal();
-            xhr.send(formData);
-        }
+        {{--    openModal();--}}
+        {{--    xhr.send(formData);--}}
+        {{--}--}}
 
 
 
