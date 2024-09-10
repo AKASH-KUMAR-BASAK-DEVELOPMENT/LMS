@@ -1,1 +1,0 @@
-window.globalProvideData('caption', '{"data":"WEBVTT%0D%0AKind:%20captions%0D%0ASource:%20Articulate%20Closed%20Captions%20Editor%0D%0ASource%20Version:%206.61.27106.0%0D%0A%0D%0A00:00:00.001%20--%3E%2000:00:01.968%0D%0AClick%20here%20for%20Play%20and%20Pause%20the%20screen.%0D%0A%0D%0A"}')
